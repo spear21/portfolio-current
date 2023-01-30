@@ -1,0 +1,52 @@
+
+
+
+.ui-card {
+  width: 350px;
+  background: radial-gradient(rgb(66, 62, 62) 50%, #000 100%);
+  overflow: hidden;
+  position: relative;
+}
+img {
+  max-width: 100%;
+}
+.ui-card img {
+  transform: scale(1.3);
+  transition: all 0.3s ease-out;
+}
+
+.ui-card:hover img {
+  transform: scale(1.1) translatey(-20px);
+  opacity: 0.3;
+
+}
+.description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+.description h3 {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.description p {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.ui-card:hover .description h3 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.ui-card:hover .description p {
+  opacity: 1;
+  transform: translateY(0px);
+}

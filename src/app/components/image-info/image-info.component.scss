@@ -1,0 +1,33 @@
+@import '../../../scss/library';
+
+.image-info-container {
+  position: absolute;
+  right: 0;
+  bottom: -15%;
+
+}
+.image-info-container img{
+  position: relative;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.circles {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 15%;
+  left: 50%;
+}
+
+.left-column {
+background-color: $primary-color;
+min-height: 320px;
+transform: skewY(18deg) translateY(-50px);
+}
+.right-column {
+background-color: $secondary-color;
+min-height: 320px;
+transform: skewY(-18deg) translateY(-50px);
+}

@@ -1,0 +1,12 @@
+{
+  "portfolio": {
+    "imageName": "goldenGateBridge",
+    "title": "Portfolio",
+    "copy": "Bacon ipsum dolor amet pork loin ground round kevin bresaola meatball chuck pancetta boudin porchetta. Shankle strip steak pork hamburger, burgdoggen bresaola pastrami venison chuck cupim."
+  },
+  "contact": {
+    "imageName": "duckHunting",
+    "title": "Contact",
+    "copy": "Chicken sirloin tenderloin shoulder, tail jowl buffalo doner hamburger picanha. Frankfurter ball tip capicola, ground round leberkas tri-tip beef ribs brisket ham tail."
+  }
+}

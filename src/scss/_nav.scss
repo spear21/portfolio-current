@@ -1,0 +1,33 @@
+@import "./reuseable.scss";
+@import "./_library.scss";
+@import "./_mixins.scss";
+
+nav {
+  height: 2rem;
+}
+
+nav .main {
+  width: 60%;;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+nav a {
+  display: block;
+  color: $primary-color;
+  text-decoration: none;
+}
+nav a:hover {
+  color: $secondary-color;
+}
+
+.active {
+  color: $contrast-color;
+  background-color: $primary-color;
+  width: 100%;
+  border-radius: 15PX;
+}

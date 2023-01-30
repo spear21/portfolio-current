@@ -1,0 +1,91 @@
+
+@import "./_library.scss";
+
+
+$grid-columns: 12;
+$grid-gutter: 1rem;
+$base-val: 45px;
+$base-seconds: 15s;
+$media-breakpoints: ( "sm" : 768px, "md" : 992px, "lg" : 1200px);
+
+
+// @function columns($columns, $container-columns: $maximum-columns) {
+//   $width: $columns * $column-width + ($columns - 1) * $gutter-width;
+//   $container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
+//   @return percentage($width / $container-width);
+// }
+
+// @function gutter($container-columns: $maximum-columns, $gutter: $gutter-width) {
+//   $container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
+//   @return percentage($gutter / $container-width);
+// }
+
+
+
+// Mixin for creating grid rows
+@mixin grid-row() {
+  &::after {
+      content: "";
+      clear: both;
+      display: table;
+  }
+}
+
+@mixin grid-column($width, $last: false) {
+  width: percentage($width / $grid-columns);
+  margin-right: if($last, 0, $grid-gutter);
+  float: left;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include grid-column($i);
+  }
+}
+
+@each $breakpoint, $value in $media-breakpoints {
+  @media (min-width: $value) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        @include grid-column($i);
+      }
+    }
+    .row{
+      &:last-child{
+        .col-#{$breakpoint}-#{$grid-columns}{
+          margin-right:0;
+        }
+      }
+    }
+  }
+}
+
+@mixin circle($val) {
+  display: block;
+  position: absolute;
+  //left: 50%;
+  width: calc($base-val * $val * 2);
+  height: calc($base-val * $val * 2);
+  border: 1px solid $secondary-color;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-radius: 50%;
+  animation: rotate calc($base-seconds/$val*100) infinite linear;
+  //transform: translateX(-50%);
+}
+
+@for $i from 1 through 4 {
+  .circle-#{$i} {
+    @include circle($i);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

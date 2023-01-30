@@ -1,0 +1,86 @@
+@import "./_library.scss";
+@import "./_mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+
+
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.grid {
+  @include grid-row();
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center {
+  margin: auto;
+}
+
+.zero-margin {
+  margin: 0 !important;
+}
+.defaultPadding {
+  padding:20px;
+}
+
+.card-container {
+  position: relative;
+}
+
+/** lists **/
+ul.no-bullets {
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margins */
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: subgrid;
+  width: max(360px, 80%);
+  position: relative;
+  z-index: 1;
+
+}
+
+app-hover-card:nth-child(1) {
+  grid-column: 2;
+}
+
+app-hover-card:nth-child(2) {
+  grid-column: 3;
+}
+
+.heading-1 {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 44px;
+}
