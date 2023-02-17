@@ -11,6 +11,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { HoverCardComponent } from './components/hover-card/hover-card.component';
 import { ImageInfoComponent } from './components/image-info/image-info.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SliderComponent } from './slider/slider.component';
+import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ImageInfoComponent } from './components/image-info/image-info.component
     PortfolioComponent,
     ContactComponent,
     HoverCardComponent,
-    ImageInfoComponent
+    ImageInfoComponent,
+    FooterComponent,
+    SliderComponent,
+    HamburgerMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,33 +1,41 @@
 @import '../../../scss/library';
 
-.image-info-container {
-  position: absolute;
-  right: 0;
-  bottom: -15%;
 
+
+.image-container {
+  position: relative;
+  width: auto;
 }
-.image-info-container img{
+
+
+
+.image-container img {
   position: relative;
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .circles {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 15%;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .left-column {
-background-color: $primary-color;
-min-height: 320px;
-transform: skewY(18deg) translateY(-50px);
+  background-color: $primary-color;
+  min-height: 280px;
+  max-height: 370px;
+  transform: skewY(18deg) translateY(-50px);
+  //filter: drop-shadow(-15px 0 1rem black);
 }
+
 .right-column {
-background-color: $secondary-color;
-min-height: 320px;
-transform: skewY(-18deg) translateY(-50px);
+  background-color: $secondary-color;
+  min-height: 280px;
+  max-height: 370px;
+  transform: skewY(-18deg) translateY(-50px);
+  //filter: drop-shadow(15px 0 1rem black);
 }

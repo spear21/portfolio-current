@@ -1,6 +1,6 @@
 @import "./_library.scss";
 @import "./_mixins.scss";
-@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+
 
 
 
@@ -49,9 +49,6 @@
   padding:20px;
 }
 
-.card-container {
-  position: relative;
-}
 
 /** lists **/
 ul.no-bullets {
@@ -63,15 +60,18 @@ ul.no-bullets {
   /* Remove margins */
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: subgrid;
-  width: max(360px, 80%);
-  position: relative;
-  z-index: 1;
 
+.card {
+  grid-column: auto;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: $contrast-color;
+  //background-blend-mode: multiply;
+  //filter: drop-shadow(0 0 1rem black);
 }
-
+// .card:hover {
+//   filter: drop-shadow(0 1px .1rem black);
+// }
 app-hover-card:nth-child(1) {
   grid-column: 2;
 }
@@ -79,8 +79,35 @@ app-hover-card:nth-child(1) {
 app-hover-card:nth-child(2) {
   grid-column: 3;
 }
-
+.indent {
+  text-indent: 1rem;
+}
 .heading-1 {
   font-family: 'Proza Libre', sans-serif;
+  font-weight: 400;
   font-size: 44px;
 }
+
+.heading-2 {
+  font-family: 'Proza Libre', sans-serif;
+  font-weight: 500;
+}
+ .disclaimer {
+  font-size: .5rem;
+ }
+
+ //margins and paddings
+ .mt-15 {
+  margin-top: 15px;
+ }
+ .ml-15 {
+  margin-left: 15px;
+ }
+
+ //paragraph styles
+ .indent {
+  text-indent: 25px;
+ }
+ .paragraph {
+  margin-bottom: 10px;
+ }

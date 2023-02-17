@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
+  mobile: boolean = false;
+  ngOnInit(): void {
+    window.addEventListener("resize", (event) => {
+      this.mobile = this.checkScreenSize();
+    });
+  this.mobile = this.checkScreenSize();
+  window.onresize = (event) => {
+
+  }
+}
+
+checkScreenSize() {
+  if (window.innerWidth < 1024) {
+    return true;
+  } else {
+    return false;
+  }
+}
 }

@@ -82,10 +82,10 @@ $media-breakpoints: ( "sm" : 768px, "md" : 992px, "lg" : 1200px);
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
 
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }

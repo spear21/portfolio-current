@@ -1,0 +1,56 @@
+/* style.css */
+.drum-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.stick-figure {
+  width: 50px;
+  height: 100px;
+  position: relative;
+  animation: play-drums 0.5s ease-in-out infinite alternate;
+}
+
+.arm {
+  transform-origin: top left;
+}
+
+.arm-left {
+  transform: rotate(-45deg);
+}
+
+.arm-right {
+  transform: rotate(45deg);
+}
+
+.leg {
+  transform-origin: bottom left;
+}
+
+.leg-left {
+  transform: rotate(-45deg);
+}
+
+.leg-right {
+  transform: rotate(45deg);
+}
+
+.drum {
+  width: 100px;
+  height: 100px;
+  margin-left: 25px;
+}
+
+@keyframes play-drums {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -7,17 +7,26 @@ nav {
 }
 
 nav .main {
-  width: 60%;;
-  overflow: hidden;
-  display: block;
-  text-align: center;
-  padding: 5px;
+  height: 65px;
+  // width: 100%;
+  background: $contrast-color;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
   font-size: 1.5rem;
-  line-height: 2rem;
-}
+  //line-height: 2rem;
+  //overflow: hidden;
+  //filter: drop-shadow(0 0 1rem black) ;
 
+}
+nav li {
+  flex-grow: 1;
+}
 nav a {
-  display: block;
   color: $primary-color;
   text-decoration: none;
 }
@@ -29,5 +38,12 @@ nav a:hover {
   color: $contrast-color;
   background-color: $primary-color;
   width: 100%;
+  padding: 0 15px;
   border-radius: 15PX;
+}
+
+.header {
+  grid-area: nav;
+  // grid-column: 1 / 4 ;
+
 }

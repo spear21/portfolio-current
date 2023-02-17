@@ -1,11 +1,27 @@
 <div class="main-container center">
-  <div class="row col-sm-12">
-    <app-main-nav></app-main-nav>
-  </div>
+  <ng-container *ngIf="!mobile">
+    <div class="header">
+      <app-main-nav></app-main-nav>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="mobile">
+    <div class="row  header">
+      <app-hamburger-menu></app-hamburger-menu>
+    </div>
+  </ng-container>
+
   <div class="clearfix"></div>
-  <div class="div row">
+  <div class="div row main-content">
     <router-outlet></router-outlet>
   </div>
+  <ng-container *ngIf="!mobile">
+    <div class="image-info-container">
+      <app-image-info></app-image-info>
+    </div>
+  </ng-container>
+  <footer class="footer">
+    <app-footer></app-footer>
+  </footer>
 
 </div>
 
